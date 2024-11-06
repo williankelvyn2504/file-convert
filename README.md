@@ -14,7 +14,7 @@ Este projeto é um conversor de arquivos simples desenvolvido em C++. Ele utiliz
 - **FFmpeg**: Certifique-se de que o FFmpeg está instalado em seu sistema e acessível via linha de comando.
 - **Compilador C++**.
 
-## Como Usar
+## Como Utilizar
 
 1. Clone este repositório:
    ```bash
