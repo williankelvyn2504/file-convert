@@ -5,26 +5,27 @@
 
 void convertFile(const std::string& inputFile, const std::string& outputFile) {
   if(!std::filesystem::exists(inputFile)) {
-    std::cerr << "Arquivo de entrada não encontrado." << std::endl;
+    std::cerr << "Input file not found." << std::endl;
     return;
   }
   std::string command = "ffmpeg -i \"" + inputFile + "\" \"" + outputFile + "\"";
-  
+
   int result = std::system(command.c_str());
   if(result == 0) {
-    std::cout << "Conversão feita com sucesso: " << outputFile << std::endl;
+    std::cout << "Successful conversion: " << outputFile << std::endl;
   } else {
-    std::cerr << "Erro ao tentar converter o arquivo." << std::endl;
+    std::cerr << "Error trying to convert file." << std::endl;
   }
 }
 
 int main() {
-  std::string inputFile, outputFile;
+  std::string inputFile,
+  outputFile;
 
-  std::cout << "Digite o caminho do arquivo de entrada: ";
+  std::cout << "Enter the path of the input file: ";
   std::getline(std::cin, inputFile);
 
-  std::cout << "Digite o caminho do arquivo de saida: ";
+  std::cout << "Enter the path of the output file: ";
   std::getline(std::cin, outputFile);
 
 
